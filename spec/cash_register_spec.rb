@@ -30,6 +30,7 @@ describe 'CashRegister' do
 
     it "doesn't forget about the previous total" do
       cash_register.add_item("Lucky Charms", 4.5)
+      binding.pry
       expect(cash_register.total).to eq(4.5)
       cash_register.add_item("Ritz Crackers", 5.0)
       expect(cash_register.total).to eq(9.5)
